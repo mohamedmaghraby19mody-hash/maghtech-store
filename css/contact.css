@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #050505;
+    color: white;
+    height: 100vh;
+}
+
+.navbar {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.back-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #00d4ff;
+}
+
+/* تنسيق الـ Container الأساسي */
+.contact-section {
+    padding: 80px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 1000px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* الجنب الشمال */
+.contact-info {
+    flex: 1;
+    background: #00d4ff;
+    color: #000;
+    padding: 40px;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* الجنب اليمين (الفورم) */
+.contact-form {
+    flex: 1.5;
+    padding: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #00d4ff;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 15px;
+    background: #00d4ff;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}

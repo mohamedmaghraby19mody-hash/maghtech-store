@@ -1,0 +1,202 @@
+/* 1. إعدادات الصفحة والخلفية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+    /* خط 'Techno' مناسب جداً */
+}
+
+body,
+html {
+    background: url("../imgs/Gemini_Generated_Image_m5b57dm5b57dm5b5.png") no-repeat center center/cover;
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* عشان الصورة تملأ الشاشة */
+}
+
+.main-container {
+    background: url('path-to-your-tech-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+/* 2. الـ Header (اسم الشركة) */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #00e5ff;
+    /* لمعان سماوي خفيف */
+}
+
+.page-header p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* 3. الـ Card الرئيسي (هنا السر) */
+.secure-access-card {
+    position: relative;
+    background: rgba(10, 10, 10, 0.9);
+    /* خلفية سوداء بلمسة شفافية */
+    border: 1px solid #333;
+    /* خط خارجي رفيع */
+    border-radius: 15px;
+    /* حواف دائرية ناعمة */
+    width: 420px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+    /* تأثير glow خافت جداً */
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(0, 229, 255, 0.3);
+    /* توهج داخلي خفيف */
+    pointer-events: none;
+}
+
+.secure-access-card h2 {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: white;
+    padding: 10px;
+}
+
+/* 4. الـ Inputs (زي الكارد اللي عجبك) */
+.input-group {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    /* خلفية شفافة */
+    border: 1px solid #222;
+    /* خط رفيع جداً */
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #00e5ff;
+    /* يتلون باللي سماوي لما تضغط عليه */
+}
+
+/* 5. الزرار (Launch Btn) */
+.launch-btn {
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid white;
+    /* خط خارجي أبيض */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.launch-btn:hover {
+    background: white;
+    /* يقلب أبيض */
+    color: #111;
+    box-shadow: 0 0 20px white;
+    /* توهج قوي */
+}
+
+/* 6. الأيقونات تحت */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icons a i {
+    color: white;
+    font-size: 20px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.social-icons a i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- تعديلات الموبايل --- */
+@media (max-width: 768px) {
+
+    /* 1. الهيدر: نصغّر الخط شوية عشان مياخدش مساحة كبيرة */
+    .shop-header h1 {
+        font-size: 28px;
+    }
+
+    /* 2. شريط البحث: نخليه ياخد عرض الشاشة */
+    .search-container form {
+        width: 90%;
+    }
+
+    /* 3. الجريد (أهم جزء): نخليه يعرض منتج واحد أو اتنين بالكتير في السطر */
+    .shop-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        /* نصغر المسافات بين المنتجات */
+        padding: 10px;
+    }
+
+    /* 4. كارت المنتج: نصغر الصور والخطوط */
+    .card-img img {
+        height: 150px;
+        /* نصغر طول الصورة */
+    }
+
+    .card-body h4 {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    /* 5. الناف بار: نخليه عمودي أو نصغر اللوجو */
+    .navbar-shop {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+}
