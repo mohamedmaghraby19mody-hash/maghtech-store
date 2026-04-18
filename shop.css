@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #050505;
+    color: white;
+}
+
+/* Navbar */
+.navbar-shop {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.back-home {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: #00d4ff;
+}
+
+/* Header */
+.shop-header {
+    text-align: center;
+    padding: 80px 8% 40px;
+}
+
+.shop-header h1 {
+    font-size: 40px;
+}
+
+.shop-header span {
+    color: #00d4ff;
+}
+
+.shop-header p {
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Grid System */
+.products-display {
+    padding: 40px 8% 100px;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.shop-card {
+    background: #111;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.shop-card:hover {
+    transform: translateY(-10px);
+    border-color: #00d4ff;
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.category {
+    color: #00d4ff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-body h4 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #00d4ff;
+    color: #000;
+}
+
+.shop-grid {
+    display: grid;
+    /* التريك السحري هنا */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.search-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container form {
+    display: flex;
+    background: #111;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 50px;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 500px;
+    transition: 0.3s;
+}
+
+.search-container form:focus-within {
+    border-color: #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.search-btn {
+    background: #00d4ff;
+    border: none;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* --- تعديلات الموبايل --- */
+@media (max-width: 768px) {
+
+    /* 1. الهيدر: نصغّر الخط شوية عشان مياخدش مساحة كبيرة */
+    .shop-header h1 {
+        font-size: 28px;
+    }
+
+    /* 2. شريط البحث: نخليه ياخد عرض الشاشة */
+    .search-container form {
+        width: 90%;
+    }
+
+    /* 3. الجريد (أهم جزء): نخليه يعرض منتج واحد أو اتنين بالكتير في السطر */
+    .shop-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        /* نصغر المسافات بين المنتجات */
+        padding: 10px;
+    }
+
+    /* 4. كارت المنتج: نصغر الصور والخطوط */
+    .card-img img {
+        height: 150px;
+        /* نصغر طول الصورة */
+    }
+
+    .card-body h4 {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    /* 5. الناف بار: نخليه عمودي أو نصغر اللوجو */
+    .navbar-shop {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+}
